@@ -3843,3 +3843,183 @@ z-index: 10;
     transform: translate(40px, -50px);
   }
 }
+
+/* Mobile layout overrides: stack content instead of squeezing the desktop hero. */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100svh;
+    overflow: hidden;
+    padding: 0 0 72px;
+  }
+
+  .hero-container {
+    width: calc(100% - 32px);
+    height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "photo"
+      "copy";
+    gap: 28px;
+    align-items: start;
+    padding-top: 0;
+  }
+
+  .hero-content {
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-title {
+    white-space: normal;
+    font-size: clamp(2rem, 10vw, 2.75rem);
+    line-height: 1.12;
+  }
+
+  .hero-typing-wrapper {
+    width: 100%;
+    white-space: normal;
+    font-size: clamp(1rem, 5vw, 1.25rem);
+    min-height: 36px;
+    margin-bottom: 14px;
+  }
+
+  .hero-description {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: min(100%, 360px);
+    height: 420px;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: none;
+  }
+
+  .bio-divider {
+    bottom: 0;
+  }
+
+  .education-section {
+    height: auto;
+    min-height: 0;
+    display: block;
+    margin-top: 0;
+    padding: 36px 12px 52px;
+  }
+
+  .education-heading {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-bottom: 18px;
+    white-space: normal;
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .education-table {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .education-table th,
+  .education-table td {
+    height: 48px;
+    padding: 8px 4px;
+    border-width: 1px;
+    font-size: 0.82rem;
+    line-height: 1.25;
+  }
+
+  .education-table th {
+    font-size: 0.78rem;
+  }
+
+  .education-table th:first-child,
+  .education-table td:first-child {
+    width: 12%;
+  }
+
+  .education-table th:nth-child(2),
+  .education-table td:nth-child(2) {
+    width: 38%;
+  }
+
+  .education-divider {
+    bottom: 0;
+  }
+
+  .profile-section {
+    min-height: 0;
+    margin-top: 20px;
+    padding: 64px 16px 64px;
+  }
+
+  .profile-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .profile-card {
+    border-radius: 16px;
+    padding: 12px;
+  }
+
+  .profile-card h2 {
+    font-size: clamp(1rem, 5vw, 1.35rem);
+  }
+
+  .professional-life-box {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 24px;
+  }
+
+  .contact-section {
+    min-height: 0;
+    padding: 64px 16px 84px;
+  }
+
+  .contact-content h2 {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    height: 380px;
+  }
+
+  .profile-grid {
+    gap: 10px;
+  }
+
+  .profile-card {
+    aspect-ratio: 1 / 0.82;
+  }
+}
