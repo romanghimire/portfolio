@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <script>
+    if (window.location.pathname.toLowerCase().endsWith('/projects.html')) {
+      window.location.replace('projects/');
+    }
+  </script>
+  <style>
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background-image: url("../assets/dark-blue-plain-wall-background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      z-index: 10;
+    }
+
+    .projects-page {
+      min-height: 100vh;
+      box-sizing: border-box;
+      padding: 72px clamp(20px, 7vw, 100px) 60px;
+      color: #fff;
+    }
+
+    .projects-title {
+      margin: 0 0 36px;
+      text-align: center;
+      font-size: clamp(2.3rem, 5vw, 4.25rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .projects-list {
+      width: min(900px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .project-card {
+      box-sizing: border-box;
+      padding: 26px 30px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-left: 5px solid rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      background: rgba(3, 18, 38, 0.78);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: reveal 0.65s ease forwards;
+    }
+
+    .project-card:nth-child(2n) { animation-delay: 0.08s; }
+    .project-card:nth-child(3n) { animation-delay: 0.16s; }
+
+    .project-card h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    }
+
+    .project-card p {
+      margin: 0;
+      line-height: 1.55;
+      opacity: 0.92;
+    }
+
+    .technologies {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .projects-page {
+        padding: 68px 18px 40px;
+      }
+
+      .project-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="../">&larr; Back</a>
+  <main class="projects-page">
+    <h1 class="projects-title">Projects &amp; Technical Work</h1>
+    <div class="projects-list">
+      <article class="project-card">
+        <h2>1. Battle Bot - Combat Robotics</h2>
+        <p>Designed and developed a battle bot with a focus on mechanical design, electronic integration, and robotics programming. Worked on motor control, movement mechanisms, and operational functionality.</p>
+        <div class="technologies"><strong>Technologies:</strong> Arduino, C/C++, Motor Drivers, Robotics</div>
+      </article>
+      <article class="project-card">
+        <h2>2. Automatic Fire Extinguisher Model</h2>
+        <p>Developed a fire-extinguishing prototype designed to detect fire and activate an extinguishing mechanism automatically.</p>
+        <div class="technologies"><strong>Technologies:</strong> Arduino, Flame Sensors, Embedded Systems, Electronics</div>
+      </article>
+      <article class="project-card">
+        <h2>3. Arduino Racing Car</h2>
+        <p>Built and programmed a robotic racing car, integrating motor drivers and electronic components to achieve controlled movement and navigation.</p>
+        <div class="technologies"><strong>Technologies:</strong> Arduino, C/C++, L298N Motor Driver, DC Motors</div>
+      </article>
+      <article class="project-card">
+        <h2>4. IoT-Based System Using Arduino Uno</h2>
+        <p>Explored Internet of Things concepts by developing an Arduino-based system that connects electronic components for monitoring and controlling different operations.</p>
+        <div class="technologies"><strong>Technologies:</strong> Arduino Uno, Sensors, Embedded Systems, IoT</div>
+      </article>
+      <article class="project-card">
+        <h2>5. Smart Home Automation System</h2>
+        <p>Developed a home automation prototype to control household electrical appliances through an automated electronic control system.</p>
+        <div class="technologies"><strong>Technologies:</strong> Arduino, Relay Modules, Sensors, IoT</div>
+      </article>
+      <article class="project-card">
+        <h2>6. Smart City Model</h2>
+        <p>Designed a smart city prototype demonstrating technology-driven urban solutions, including intelligent street lighting, smart infrastructure, and automated systems.</p>
+        <div class="technologies"><strong>Technologies:</strong> Arduino, LEDs, Sensors, Embedded Systems</div>
+      </article>
+      <article class="project-card">
+        <h2>7. Smart Street Lighting System</h2>
+        <p>Developed a model of an automated street lighting system that uses environmental sensors to control lighting based on surrounding conditions.</p>
+        <div class="technologies"><strong>Technologies:</strong> Arduino, LDR Sensors, LEDs, C/C++</div>
+      </article>
+      <article class="project-card">
+        <h2>8. Obstacle Detection &amp; Avoidance Robot</h2>
+        <p>Worked on a robotic system designed to detect obstacles and navigate around them using distance sensors and programmed motor control.</p>
+        <div class="technologies"><strong>Technologies:</strong> Arduino, Ultrasonic Sensors, Motor Drivers, Arduino IDE</div>
+      </article>
+      <article class="project-card">
+        <h2>9. Personal Portfolio Website</h2>
+        <p>Designed and developed a personal portfolio website to showcase technical projects, skills, achievements, and professional experience.</p>
+        <div class="technologies"><strong>Technologies:</strong> HTML, CSS, JavaScript, VS Code</div>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

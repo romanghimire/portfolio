@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects</title>
+  <script>
+    if (window.location.pathname.toLowerCase().endsWith('/projects.html')) {
+      window.location.replace('projects/');
+    }
+  </script>
   <style>
     html, body {
       width: 100%;
@@ -111,7 +116,7 @@
   </style>
 </head>
 <body>
-  <a class="back-link" href="index.html">&larr; Back</a>
+  <a class="back-link" href="./">&larr; Back</a>
   <main class="projects-page">
     <h1 class="projects-title">Projects &amp; Technical Work</h1>
     <div class="projects-list">
