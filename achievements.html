@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements</title>
+  <style>
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background-image: url("assets/dark-blue-plain-wall-background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .achievements-page {
+      min-height: 100vh;
+      box-sizing: border-box;
+      padding: 72px clamp(20px, 7vw, 100px) 60px;
+      color: #fff;
+    }
+
+    .achievements-title {
+      max-width: 900px;
+      margin: 0 auto 38px;
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .achievements-grid {
+      width: min(900px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .achievement-category {
+      margin: 28px 0 6px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+      font-size: clamp(1.35rem, 3vw, 2rem);
+    }
+
+    .achievement-card {
+      box-sizing: border-box;
+      padding: 26px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-left: 5px solid rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      background: rgba(3, 18, 38, 0.78);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: reveal 0.65s ease forwards;
+    }
+
+    .achievement-card:nth-child(2n) { animation-delay: 0.08s; }
+    .achievement-card:nth-child(3n) { animation-delay: 0.16s; }
+
+    .achievement-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.15rem;
+    }
+
+    .achievement-card p {
+      margin: 0;
+      line-height: 1.55;
+      opacity: 0.92;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 780px) {
+      .achievements-page {
+        padding: 68px 18px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="index.html">&larr; Back</a>
+  <main class="achievements-page">
+    <h1 class="achievements-title">Achievements</h1>
+    <div class="achievements-grid">
+      <h2 class="achievement-category">Leadership &amp; Club Involvement</h2>
+      <article class="achievement-card">
+        <strong>Former Member - Interact Club</strong>
+        <p>Contributed to social service initiatives, community engagement, and student-led activities.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Former Games Head - SQC Club</strong>
+        <p>Led and coordinated games and recreational activities, promoting teamwork and sportsmanship.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Technical Manager - Nexus Society</strong>
+        <p>Managed technical activities and supported the execution of club programs and events.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Tech Head - Robotics Club</strong>
+        <p>Led technical initiatives and encouraged robotics, innovation, and practical learning.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Core Community Member - Mathematics Club</strong>
+        <p>Participated in mathematical activities promoting analytical and problem-solving skills.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>IT Head - Literature Club</strong>
+        <p>Contributed to club activities and supported technical requirements.</p>
+      </article>
+
+      <h2 class="achievement-category">Technical Achievements &amp; Innovation</h2>
+      <article class="achievement-card">
+        <strong>Science Exhibition Participation</strong>
+        <p>Participated in science exhibitions, showcasing technical knowledge, creativity, and innovative ideas.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Robotics Development</strong>
+        <p>Designed, built, and developed robots through practical robotics activities.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Battle Bot Development</strong>
+        <p>Designed and built combat robots, including programming and implementing their functional operations.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Robotics Programming</strong>
+        <p>Wrote and implemented code to control robotic systems and improve their functionality.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Hackathon Participation</strong>
+        <p>Collaborated with fellow innovators to develop technology-driven solutions.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Hackathon Core Community Member</strong>
+        <p>Supported innovation, collaboration, and technical engagement in hackathon communities.</p>
+      </article>
+
+      <h2 class="achievement-category">Social Work &amp; Community Engagement</h2>
+      <article class="achievement-card">
+        <strong>Student Engagement &amp; Program Coordination</strong>
+        <p>Engaged students, organized events, and conducted educational and extracurricular programs.</p>
+      </article>
+      <article class="achievement-card">
+        <strong>Community Service &amp; Social Work</strong>
+        <p>Participated in community-based projects, social initiatives, and collaborative activities creating a positive impact.</p>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

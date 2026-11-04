@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills</title>
+  <style>
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background-image: url("assets/dark-blue-plain-wall-background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .skills-page {
+      min-height: 100vh;
+      box-sizing: border-box;
+      padding: 24px clamp(20px, 5vw, 72px) 56px;
+    }
+
+    .back-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .skills-heading {
+      margin: 28px 0 34px;
+      text-align: center;
+      font-size: clamp(2.3rem, 5vw, 4.25rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .skills-grid {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .skills-card {
+      width: 100%;
+      min-height: 0;
+      box-sizing: border-box;
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 18px;
+      background: rgba(4, 18, 38, 0.78);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      transform: translateY(24px);
+      animation: card-in 0.7s ease forwards;
+    }
+
+    .skills-card:nth-child(2) { animation-delay: 0.12s; }
+    .skills-card:nth-child(3) { animation-delay: 0.24s; }
+
+    .skills-card h2 {
+      margin: 0 0 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      font-size: clamp(1.25rem, 2vw, 1.7rem);
+    }
+
+    .skills-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skills-card li {
+      position: relative;
+      margin: 0 0 14px;
+      padding-left: 18px;
+      line-height: 1.45;
+    }
+
+    .skills-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    @keyframes card-in {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-card {
+        min-height: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="skills-page">
+    <a class="back-link" href="index.html">&larr; Back</a>
+    <h1 class="skills-heading">Skills</h1>
+
+    <div class="skills-grid">
+      <section class="skills-card">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li>Programming in C and C++</li>
+          <li>HTML, CSS and JavaScript</li>
+          <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+          <li>Basic Computer Networking</li>
+          <li>Computer Hardware and Troubleshooting</li>
+          <li>Basic Knowledge of Artificial Intelligence</li>
+        </ul>
+      </section>
+
+      <section class="skills-card">
+        <h2>Soft Skills</h2>
+        <ul>
+          <li>Problem-Solving</li>
+          <li>Critical Thinking</li>
+          <li>Teamwork and Collaboration</li>
+          <li>Communication Skills</li>
+          <li>Time Management</li>
+          <li>Adaptability</li>
+          <li>Leadership</li>
+          <li>Creative Thinking</li>
+        </ul>
+      </section>
+
+      <section class="skills-card">
+        <h2>Other Skills</h2>
+        <ul>
+          <li>Project Management</li>
+          <li>Research and Analysis</li>
+          <li>Presentation Skills</li>
+          <li>Quick Learning Ability</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
