@@ -3015,7 +3015,7 @@ textarea.form-control {
 .hero-portrait {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -4067,21 +4067,21 @@ z-index: 10;
   }
 
   .hero-image {
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    height: calc(123.6979167vw);
     margin: 0;
     justify-content: center;
     overflow: hidden;
   }
 
   .hero-image img {
-    width: 100vw;
-    max-width: 100vw;
-    height: auto;
+    width: 100%;
+    height: calc(123.6979167vw);
     aspect-ratio: 768 / 950;
     margin: 0;
     display: block;
-    object-fit: fill;
+    object-fit: contain;
+    object-position: center top;
     transform: none;
   }
 
