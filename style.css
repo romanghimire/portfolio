@@ -4067,21 +4067,21 @@ z-index: 10;
   }
 
   .hero-image {
-    width: 100%;
-    height: calc(123.6979167vw);
+    width: 100vw;
+    height: auto;
     margin: 0;
     justify-content: center;
     overflow: hidden;
   }
 
   .hero-image img {
-    width: 100%;
-    height: calc(123.6979167vw);
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
     aspect-ratio: 768 / 950;
     margin: 0;
     display: block;
-    object-fit: cover;
-    object-position: center center;
+    object-fit: fill;
     transform: none;
   }
 
